@@ -1,0 +1,5 @@
+<!--components/feidianItem/feidianItem/feidianItem.wxml-->
+<view class='item' hover-class='hover-class'>
+  <feidianItemTop item="{{item}}"></feidianItemTop>
+  <feidianItemBottom item="{{item}}"></feidianItemBottom>
+</view>

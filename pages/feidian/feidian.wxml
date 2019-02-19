@@ -24,4 +24,8 @@
       </block>
     </swiper>
   </view>
+  <view class='pinList'>
+    <feidianItem wx:for="{{list}}" item="{{item}}">
+    </feidianItem>
+  </view>
 </view>

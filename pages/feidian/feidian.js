@@ -10,9 +10,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    COUNT: 30,
     recommendList:[],//swiper 数据源
     scrollTop:0,
-    swiperHeight:'auto'
+    swiperHeight:'auto',
+    list:[]
   },
 
   /**
@@ -42,6 +44,7 @@ Page({
     })
     this.initSwiper()
     this.getHotRecommendList()
+    this.pinListRecommend(true)
   },
   initSwiper(){
     console.log(systeminfo)
@@ -69,6 +72,32 @@ Page({
       }
     })
     .catch((err)=>{
+      wx.showToast({
+        title: '网路开小差，请稍后再试',
+        icon: 'none',
+      })
+    })
+  },
+  pinListRecommend(reload){
+    let that = this
+    const auth = this.data.auth
+    const data = {
+      uid: auth.uid,
+      device_id: auth.clientId,
+      token: auth.token,
+      src: 'web',
+      limit: this.data.COUNT,
+      before: '',
+    }
+    api.get(`${config.shortMsgMsRequestUrl}/pinList/recommend`, data).then((res) => {
+      console.log(res)
+      let data = res.data
+      if(data.s === 1) {
+        that.setData({
+          list: data.d.list || []
+        })
+      }
+    }).catch((err)=> {
 
     })
   },

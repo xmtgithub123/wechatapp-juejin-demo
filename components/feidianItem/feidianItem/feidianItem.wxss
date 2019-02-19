@@ -1,0 +1,5 @@
+/* components/feidianItem/feidianItem/feidianItem.wxss */
+.item {
+  background: #fff;
+  margin-bottom: 20rpx;
+}
