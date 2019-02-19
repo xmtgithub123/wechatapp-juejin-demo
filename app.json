@@ -1,12 +1,51 @@
 {
   "pages":[
+    "pages/launch/launch",
     "pages/index/index",
+    "pages/search/search",
+    "pages/feidian/feidian",
+    "pages/xiaoce/xiaoce",
+    "pages/my/my",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#3281ff",
+    "navigationBarTitleText": "juejin demo",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "color":"#abb4bf",
+    "selectedColor": "#3281ff",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text":"首页",
+        "iconPath":"images/tab_home_normal.png",
+        "selectedIconPath":"images/tab_home.png"
+      },{
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "images/tab_explore_normal.png",
+        "selectedIconPath": "images/tab_explore.png"
+      },{
+        "pagePath": "pages/feidian/feidian",
+        "text": "沸点",
+        "iconPath": "images/tab_feidian_normal.png",
+        "selectedIconPath": "images/tab_feidian.png"
+      },{
+        "pagePath": "pages/xiaoce/xiaoce",
+        "text": "小册",
+        "iconPath": "images/tab_xiaoce_normal.png",
+        "selectedIconPath": "images/tab_xiaoce.png"
+      },{
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/tab_profile_normal.png",
+        "selectedIconPath": "images/tab_profile.png"
+      }
+    ]
   }
 }
